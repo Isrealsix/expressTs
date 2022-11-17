@@ -8,4 +8,6 @@ export const createTodo: RequestHandler = (req, res, next) => {
 	const newTodo = new Todo(Math.random().toString(), text);
 
 	TODOS.push(newTodo);
+
+	res.json({message: 'Created todo.', newTodo}).status(201)
 }
