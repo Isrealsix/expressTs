@@ -11,3 +11,7 @@ export const createTodo: RequestHandler = (req, res, next) => {
 
 	res.json({message: 'Created todo.', newTodo}).status(201)
 }
+
+export const getTodos: RequestHandler = (req, res, next) => {
+	res.json({ todos: TODOS})
+}
